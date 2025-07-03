@@ -1,51 +1,682 @@
-g<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dinokeng Game Reserve - Gauteng's Only Big Five Game Reserve</title>
-  </head>
-  <body style="margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f4f8; color: #070108; overflow: hidden;">
 
-    <header style="justify-content: space-between; color: #070108; background-color: #fff ; display: flex; padding: 10px 50px; text-align: center; align-items: center; border-bottom: 1px solid #eee; position: fixed; width: 100%; top: 0; left: 0; z-index: 1000;box-sizing: border-box; ">
-      <img style="height: 60px;" src="./images/logo.png" alt="Dinokeng Logo" />
-      <nav style="background-color: #FFFFFF;">
-        <ul style="display: flex; justify-content: center; padding: 10px; list-style: none; margin: 0;">
-          <li style="margin: 0 15px;"><a href="#" style="text-decoration: none; color: #070108; font-weight: bold;">Home</a></li>
-          <li style="margin: 0 15px;"><a href="#" style="text-decoration: none; color: #070108; font-weight: bold;">Visit Us</a></li>
-          <li style="margin: 0 15px;"><a href="#" style="text-decoration: none; color: #070108; font-weight: bold;">Accommodation</a></li>
-          <li style="margin: 0 15px;"><a href="#" style="text-decoration: none; color: #070108; font-weight: bold;">About Us</a></li>
-          <li style="margin: 0 15px;"><a href="#" style="text-decoration: none; color: #070108; font-weight: bold;">Conservation</a></li>
-          <li style="margin: 0 15px;"><a href="#" style="text-decoration: none; color: #070108; font-weight: bold;">Get Involved</a></li>
-          <li style="margin: 0 15px;"><a href="#" style="text-decoration: none; color: #070108; font-weight: bold;">Resources</a></li>
-          <li style="margin: 0 15px;"><a href="#" style="text-decoration: none; color: #070108; font-weight: bold;">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinokeng Game Reserve - Gauteng's Only Big Five Game Reserve</title>
+  <style>
+    .Image-cover {
+      display: inline-block;
+      vertical-align: middle;
+      margin: auto;
 
-    <div style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; overflow: hidden;">
-      <video
-        class="elementor-background-video-hosted"
-        autoplay
-        muted
-        playsinline
-        loop
+
+    }
+
+    .About-section {
+      flex: left;
+      width: 50%;
+      text-align: left;
+      letter-spacing: 1px;
+
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+
+    .Image-cover {
+      width: 30px;
+      height: auto;
+      object-fit: center;
+      vertical-align: right;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      float: right;
+      flex-direction: column;
+
+    }
+
+    .image {
+      margin-bottom: 10px;
+
+    }
+
+    .click-button {
+      /* display: block; */
+      width: 300px;
+      margin: 10px 5px 5px 5px;
+      /* font-family: "Times New Roman", Times, serif; */
+      font-weight: bold;
+      font-size: 17px;
+      border: none;
+      text-align: center;
+      border: none;
+      background-color: transparent;
+
+    }
+
+    .click-but {
+      display: block;
+      width: 250px;
+      margin: 8px 5px 5px 5px;
+      /* font-family: "Times New Roman", Times, serif; */
+      font-size: 12px;
+      background-color: #141A0A;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+
+    }
+
+    .stay-section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px 10%;
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      width: 55%;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .image-gallery img {
+      height: 100px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+
+    .text-content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .text-content h2 {
+      font-size: 34px;
+      color: #324d0c;
+      margin-bottom: 20px;
+    }
+
+    .text-content p {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .explore-btn {
+      background-color: #324d0c;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .explore-btn:hover {
+      background-color: #486e0f;
+    }
+
+    /* ------------------------------------------------------ */
+    .events-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 0 40px 50px;
+    }
+
+
+    .event-card {
+      background-color: white;
+      width: 400px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .event-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-content: flex-end;
+    }
+
+    .event-image {
+      background-color: #2a3b1e;
+      background-size: cover;
+      background-position: center;
+      height: 180px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .event-title {
+      background-color: #2a3b1e;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .sold-out-label {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      font-size: 0.95rem;
+      padding: 6px 14px;
+      transform: rotate(45deg);
+      transform-origin: top right;
+    }
+
+    .event-details {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .event-details h2 {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      /* margin-bottom: 10px; */
+    }
+
+    .event-details p {
+      margin: 5px 0;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #1d3c1f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: #666;
+      cursor: not-allowed;
+    }
+
+    .site-footer {
+      /* background-color: #223315; */
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-top {
+      background-color: #C3C39B7D;
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .contact-btn {
+      background-color: #223315;
+      color: white;
+      padding: 12px 24px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 40px 60px;
+      flex-wrap: wrap;
+      background-color: #223315;
+      color: white;
+    }
+
+    .footer-left {
+      display: flex;
+      flex: 1;
+      gap: 20px;
+      flex-wrap: wrap;
+      min-width: 300px;
+    }
+
+    .footer-logo-column {
+      flex-shrink: 0;
+    }
+
+    .footer-contact-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .footer-logo {
+      width: 130px;
+      height: auto;
+    }
+
+    .contact-info,
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 12px 0;
+    }
+
+    .contact-info li,
+    .footer-links li {
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer-right {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      min-width: 300px;
+    }
+
+    .social-icons-light {
+      margin-bottom: 20px;
+    }
+
+    .social-icons-light a {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .social-icons-light img {
+      background-color: #d4d2aa;
+      border-radius: 40%;
+      padding: 8px;
+      width: 30px;
+      height: 30px;
+    }
+
+    .buy-permits-btn {
+      background-color: #d4d2aa;
+      border: none;
+      padding: 14px 20px;
+      font-weight: bold;
+      border-radius: 6px;
+      color: #223315;
+      font-size: 0.85rem;
+      width: 100%;
+      max-width: 320px;
+    }
+  </style>
+</head>
+
+<body style="
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #070108;
+      /* overflow: hidden; */
+    ">
+  <header style="
+        justify-content: space-between;
+        color: #070108;
+        background-color: #fff;
+        display: flex;
+        padding: 10px 50px;
+        text-align: center;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        box-sizing: border-box;
+      ">
+    <img style="height: 60px" src="./images/logo.png" alt="Dinokeng Logo" />
+    <nav style="background-color: #ffffff">
+      <ul style="
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            list-style: none;
+            margin: 0;
+          ">
+        <li style="margin: 0 15px">
+          <a href="#" style="text-decoration: none; color: #070108; font-weight: bold">Home</a>
+        </li>
+        <li style="margin: 0 15px">
+          <a href="#" style="text-decoration: none; color: #070108; font-weight: bold">Visit Us</a>
+        </li>
+        <li style="margin: 0 15px">
+          <a href="#" style="text-decoration: none; color: #070108; font-weight: bold">Accommodation</a>
+        </li>
+        <li style="margin: 0 15px">
+          <a href="#" style="text-decoration: none; color: #070108; font-weight: bold">About Us</a>
+        </li>
+        <li style="margin: 0 15px">
+          <a href="#" style="text-decoration: none; color: #070108; font-weight: bold">Conservation</a>
+        </li>
+        <li style="margin: 0 15px">
+          <a href="#" style="text-decoration: none; color: #070108; font-weight: bold">Get Involved</a>
+        </li>
+        <li style="margin: 0 15px">
+          <a href="#" style="text-decoration: none; color: #070108; font-weight: bold">Resources</a>
+        </li>
+        <li style="margin: 0 15px">
+          <a href="#" style="text-decoration: none; color: #070108; font-weight: bold">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <div style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          z-index: -1000;
+          overflow: hidden;
+        ">
+      <video class="elementor-background-video-hosted" autoplay muted playsinline loop
         src="https://www.dinokengreserve.co.za/wp-content/uploads/2024/06/DGR-WEB-BANNER_1.mp4"
-        style="width: 100vw; height: 100vh; object-fit: cover;"
-      ></video>
+        style="width: 100vw; height: 100vh; object-fit: cover"></video>
     </div>
 
-    <div class="hero" style="width: 65.76%; background-size: cover; background-position: center; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left; height: calc(100vh - 70px); padding-left: 5%; gap: 20px; box-sizing: border-box; margin-top: 70px;">
-      <h1 style="text-align: left; margin-block-end: 1rem; margin-block-start: .5rem; box-sizing: border-box; line-height: 1; margin: 0; padding: 0; font-family: 'Oswald', Sans-serif; font-size: 45px; font-weight: 700; color: #FFFFFF;">
+    <div class="hero" style="
+          width: 65.76%;
+          background-size: cover;
+          background-position: center;
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          text-align: left;
+          height: calc(100vh - 70px);
+          padding-left: 5%;
+          gap: 20px;
+          box-sizing: border-box;
+          margin-top: 70px;
+        ">
+      <h1 style="
+            text-align: left;
+            margin-block-end: 1rem;
+            margin-block-start: 0.5rem;
+            box-sizing: border-box;
+            line-height: 1;
+            margin: 0;
+            padding: 0;
+            font-family: 'Oswald', Sans-serif;
+            font-size: 45px;
+            font-weight: 700;
+            color: #ffffff;
+          ">
         UNCOVER DINOKENG GAME RESERVE
       </h1>
-      <h2 style="text-align: left; margin-block-end: 1rem; margin-block-start: .5rem; box-sizing: border-box; line-height: 1; margin: 0; padding: 0; font-family: 'Montserrat', Sans-serif; font-size: 26px; font-weight: 400; text-transform: uppercase; color: #FFFFFF;">
+      <h2 style="
+            text-align: left;
+            margin-block-end: 1rem;
+            margin-block-start: 0.5rem;
+            box-sizing: border-box;
+            line-height: 1;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', Sans-serif;
+            font-size: 26px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #ffffff;
+          ">
         GAUTENG'S ONLY BIG FIVE GAME RESERVE
       </h2>
-      <a class="cta-button" href="#" style="box-sizing: border-box; display: inline-block; line-height: 1; padding: 12px 24px; text-align: center; transition: all .3s; box-shadow: none; text-decoration: none; font-family: 'Montserrat', Sans-serif; font-size: 12px; font-weight: 600; color: #fff; background-color: transparent; border-style: solid; border-radius: 5px;">
+      <a class="cta-button" href="#" style="
+            box-sizing: border-box;
+            display: inline-block;
+            line-height: 1;
+            padding: 12px 24px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: none;
+            text-decoration: none;
+            font-family: 'Montserrat', Sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: #fff;
+            background-color: transparent;
+            border-style: solid;
+            border-radius: 5px;
+          ">
         <span>BUY PERMITS &amp; PAY CONSERVATION FEES</span>
       </a>
     </div>
+  </section>
 
-  </body>
+  <section style="display: flex; flex-direction: row; padding: 30px 5%;">
+    <div class="About-section">
+      <h1 style="color: #2B3921; font-size: 35px; font-weight: 700;">WELCOME TO DINOKENG GAME RESERVE</h1>
+      <p style="color: #233B26;">
+        Welcome to Dinokeng Game
+        Reserve, the only Big 5 reserve in Gauteng. Just 40 minutes from Pretoria and malaria-free, our reserve offers
+        an
+        extraordinary adventure close to the city. Get ready to embrace the untamed beauty and embark on a journey
+        you'll
+        never forget.
+      </p>
+      <p style="color: #233B26;">
+        Dinokeng Game Reserve has recently celebrated its first decade of conservation success. Located within a large
+        metropolis, Dinokeng Game Reserve is poised to become a model for future conservation efforts, howcasing how
+        people and wild animals can live in harmony. Our name, meaning "a place of rivers," comes from the languages of
+        the baTswana and baPedi people who traditionally inhabited this area.
+      </p>
+      <p style="color: #233B26;">
+        At Dinokeng Game Reserve,
+        we believe that if we take
+        care of nature, nature
+        will take care of us. Join
+        us in preserving this
+        beautiful reserve for
+        future generations. Become
+        a part of our conservation
+        efforts today!
+      </p>
+
+    </div>
+
+    <div class="Image-cover">
+      <img src="https://www.dinokengreserve.co.za/wp-content/uploads/2025/06/DGR-ISSUE-15-COVER-720x1024.png"
+        alt="black-jackal cover on dinokeng-gamereserve website" decoding="async" width=200px; height=230px;
+        class="image" ;>
+
+      <a href="https://online.flippingbook.com/view/757347986/" target="_blank">
+        <button class="click-button" style=" color: #2B3921;">ISSUE 15-JUNE/JULY 2025</button>
+        <a href="https://online.flippingbook.com/view/757347986/" target="_blank">
+          <button class="click-but">CLICK TO READ OUR FREE MAGAZINE
+          </button>
+
+    </div>
+  </section>
+  <section class="stay-section" style="background-color: #C3C39B7D;">
+
+    <div class="image-gallery">
+      <img src="./images/THE-LEADWOOD-SAFARI-CAMP-HERO.webp" alt="Room interior">
+      <img src="./images/Sunset.jpg.webp" alt="Sunset">
+      <img src="./images/Koedoesrus-Boskamp-HERO.webp" alt="Boskamp">
+      <img src="./images/HONEY-LODGE-HERO.webp" alt="Vacation spot">
+      <img src="./images/Ngala-Lodge-HERO.webp" alt="Safari stay">
+      <img src="./images/Owl-Spot10.jpeg" alt="Lodge sunset">
+      <img src="./images/Hunters-pride-6.jpeg" alt="Luxury lodge">
+      <img src="./images/Ritsako-6.jpeg" alt="Campfire">
+      <img src="./images/Isinkwe5.jpeg" alt="Tent">
+      <img src="./images/Tshikwalo-Guest-House_Main-scaled.jpg" alt="Lodge">
+      <img src="./images/Golden-Impala-6.jpeg" alt="Pool">
+      <img src="./images/LEKKERBREEK-ACC-2-scaled.jpg" alt="Luxury lodge">
+      <img src="./images/Gallery.jpg" alt="Tent">
+    </div>
+
+    <div class="text-content">
+      <h2>STAY A WHILE…</h2>
+      <p>The reserve offers a diverse range of accommodation options, from luxury lodges, to comfortable self-catering
+        chalets and campsites that allow visitors to explore the reserve at their own pace. Whether you’re looking for a
+        rustic bushveld experience or a lavish retreat, Dinokeng Game Reserve offers something for every type of
+        traveller.</p>
+      <button class="explore-btn">EXPLORE ACCOMMODATION</button>
+    </div>
+
+  </section>
+  <section>
+    <section class="events-section" style="color: #233B26; background-color: #C3C39B7D;">
+      <h1 style="font-size: 45px; font-weight: 700; padding: 40px;"><br>Upcoming Conservation Events</h1>
+      <div class="events-container">
+
+        <!-- Event Card 1 -->
+        <div class="event-card">
+          <div class="event-image"
+            style="background-image: url('https://i.postimg.cc/mDbzmjQH/geranimo-Ks-MD-t-Adjg0-unsplash.jpg');">
+            <div class="event-title">RHINO COLLARING</div>
+          </div>
+          <div class="event-details">
+            <h2>Rhino Collaring</h2>
+            <p>19 June 2025<br>7h30</p>
+            <p>Venue: Mongena Lodge</p>
+            <p>10 seats available</p>
+            <p>R2500 per person</p>
+            <button>BOOK NOW</button>
+          </div>
+        </div>
+
+        <!-- Event Card 2 -->
+        <!-- <div class="event-card">
+        <div class="event-image" style="background-image: url('https://i.postimg.cc/RZKW9ydt/andrew-liu-Eun-FGVJLPm-Q-unsplash.jpg');">
+          <div class="event-title">RHINO COLLARING</div>
+          <div class="sold-out-label">SOLD OUT</div>
+        </div>
+        <div class="event-details">
+          <h2>Rhino Collaring</h2>
+          <p>9 July 2025<br>7h00</p>
+          <p>Venue: Mongena Lodge</p>
+          <p>10 seats available</p>
+          <p>R2500 per person</p>
+          <button disabled>BOOK NOW</button>
+        </div>
+      </div> -->
+
+        <!-- Event Card 3 -->
+        <div class="event-card">
+          <div class="event-image"
+            style="background-image: url('https://i.postimg.cc/gjBbCz1W/keith-markilie-j-Bj-QA3-LU9-Dc-unsplash.jpg');">
+            <div class="event-title">RHINO COLLARING</div>
+          </div>
+          <div class="event-details">
+            <h2>Rhino Collaring</h2>
+            <p>10 July 2025<br>7h30</p>
+            <p>Venue: Mongena Lodge</p>
+            <p>20 seats available</p>
+            <p>R2500 per person</p>
+            <button>BOOK NOW</button>
+          </div>
+        </div>
+
+        <!-- Event Card 4 -->
+        <div class="event-card">
+          <div class="event-image" style="background-image: url('https://i.postimg.cc/LXNR2BGL/Rhino1.png');">
+            <div class="event-title">RHINO COLLARING</div>
+          </div>
+          <div class="event-details">
+            <h2>Rhino Collaring</h2>
+            <p>18 July 2025<br>7h30</p>
+            <p>Venue: Mongena Lodge</p>
+            <p>12 seats available</p>
+            <p>R2500 per person</p>
+            <button>BOOK NOW</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-top">
+        <button class="contact-btn">Contact Us</button>
+        <div class="social-icons">
+          <a href="#"><img src="https://i.postimg.cc/FRqp8s8F/facebook.png" alt="Facebook" /></a>
+          <a href="#"><img src="https://i.postimg.cc/fWtBXmSV/Instagram.png" alt="Instagram" /></a>
+          <a href="#"><img src="https://i.postimg.cc/1RkMKXDJ/youtube.png" alt="YouTube" /></a>
+          <a href="#"><img src="https://i.postimg.cc/jSKXG1gf/linkedin.png" alt="LinkedIn" /></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-left">
+          <div class="footer-logo-column">
+            <img src="https://i.postimg.cc/Pq15sDtQ/dinokeng.png" alt="Dinokeng Game Reserve" class="footer-logo" />
+          </div>
+          <div class="footer-contact-column">
+            <ul class="contact-info">
+              <li>ðŸ¢ Dinokeng Game Reserve, N1 North Hammanskraal, 0400</li>
+              <li>ðŸ“ž +27(12) 7114391</li>
+              <li>âœ‰ï¸ reception@dinokengreserve.co.za</li>
+            </ul>
+            <ul class="footer-links">
+              <li><a href="#">PAIA Manual</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">POPIA Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <div class="social-icons-light">
+            <a href="#"><img src="https://i.postimg.cc/FRqp8s8F/facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="https://i.postimg.cc/fWtBXmSV/Instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="https://i.postimg.cc/1RkMKXDJ/youtube.png" alt="YouTube" /></a>
+            <a href="#"><img src="https://i.postimg.cc/jSKXG1gf/linkedin.png" alt="LinkedIn" /></a>
+          </div>
+          <button class="buy-permits-btn">
+            CLICK TO BUY PERMITS & PAY CONSERVATION FEES
+          </button>
+        </div>
+      </div>
+    </footer>
+  </section>
+</body>
+
 </html>
