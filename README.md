@@ -1,2 +1,3 @@
 # GirlCode-Team
-GirlCode team for building business website for Her Cosmetics shop
+Dinokeng Game Lodge Clone
+
